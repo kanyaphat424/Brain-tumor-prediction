@@ -1,0 +1,48 @@
+{% extends "import.html" %} 
+{% block content %}
+
+<center>
+    <style>
+        body {
+            background-color: #efd9ea; /* เปลี่ยนสีพื้นหลังของหน้าเว็บเป็นสีเทาอ่อน */
+        }
+    </style>
+    
+    <div class="container" style="background-color: rgb(184, 207, 224); padding: 30px;margin: 20px;border-radius: 10px;">
+        <br><h2>AI System for brain tumor prediction</h2><br>
+        <h2 style="font-size: 24px; color: #333;"></h2>
+    
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" class="btn btn-success" id="imageUpload" accept=".png, .jpg, .jpeg" style="background-color: rgb(246, 141, 158); width: 300px; max-width: 100%; font-size: 19px;">
+        </form>
+    
+        <div class="image-section" style="display:none;">
+            <img id="imagePreview" class="img-responsive" src="#" style="width:300px;height:300px;" /><br><br>
+            <div>
+                <button type="button" class="btn btn-info btn-lg" id="btn-predict" style="background-color: rgb(247, 231, 123); color: gray;">Predict</button>
+            </div>
+        </div>
+    
+        <div class="loader" style="display:none;"></div>
+        <h3 id="result">
+            <span> </span>
+        </h3>
+    </div>
+    
+    <style>
+        #result {
+            color: rgb(246, 251, 248); /* เปลี่ยนเป็นสีฟ้า */
+            background-color: rgb(66, 148, 96);
+            border: 1px solid rgb(66, 148, 96); /* เพิ่มกรอบ */
+            padding: 5px; /* เพิ่มช่องว่างรอบข้อความ */
+            display: inline-block; /* ทำให้กรอบครอบข้อความได้ถูกต้อง */
+        }
+    </style>
+    
+    
+    
+    <br><h4>"Every setback is a setup for a comeback"</h4><br>
+    
+
+</center><br><br>
+{% endblock %}
